@@ -121,6 +121,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+DATE_FORMAT = 'd/m/Y'
+
+DATETIME_FORMAT = 'd-m-Y H:i:S'
+
+DECIMAL_SEPARATOR = ','
+
+USE_THOUSAND_SEPARATOR = True
+
+THOUSAND_SEPARATOR = '.'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
