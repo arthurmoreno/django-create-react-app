@@ -30,6 +30,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=str, default='*').split(',')
 
 APPEND_SLASH = True
 
+API_VERSION = config('API_VERSION', default=1)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -137,4 +139,8 @@ THOUSAND_SEPARATOR = '.'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     BASE_DIR.ancestor(1).child('build').child('static'),
+)
+
+STATIC_ROOT = config(
+    'STATIC_ROOT', default=BASE_DIR.ancestor(1).child('staticfiles')
 )
